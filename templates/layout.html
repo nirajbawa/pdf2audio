@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>pdf to audio app</title>
+<link rel="shortcut icon" href="{{ url_for('static', filename='../static/images/favicon.png') }}">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='../static/css/style.css')}}">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&display=swap" rel="stylesheet">
+
+<link rel="shortcut icon" href="#" />
+
+  </head>
+  <body>
+
+
+<!-- computer menu -->
+    <nav id="nav">
+      <button id="navbutton" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa fa-bars" aria-hidden="true"></i></button>
+    </nav>
+
+
+    <!-- mobile menu -->
+
+    <nav id="mobilemenu">
+        <a href="/"><button><i class="fa fa-home" aria-hidden="true"></i></button></a>
+        <a href="/converter"><button><i class="fa fa-file-pdf-o" aria-hidden="true"></i></button></a>
+        <a href="/about"><button><i class="fa fa-info-circle" aria-hidden="true"></i></button></a>
+        <a href="/PrivacyPolicy"><button><i class="fa fa-user-secret" aria-hidden="true"></i></button></a>
+    </nav>
+
+    
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="model">
+            <div id="menu">
+                <a href="/"><button><i class="fa fa-home" aria-hidden="true"></i> home</button></a>
+                <a href="/converter"><button><i class="fa fa-file-pdf-o" aria-hidden="true"></i> converter</button></a>
+                <a href="/PrivacyPolicy"><button><i class="fa fa-user-secret" aria-hidden="true"></i> Privacy & Policy</button></a>
+                <a href="/about"><button><i class="fa fa-info-circle" aria-hidden="true"></i> about</button></a>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% block body %} {% endblock %}
+
+
+
+
+ <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+
+
+
+    <script src="{{ url_for('static', filename='../static/js/layout.js')}}"></script>
+
+  </body>
+</html>

@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div id="mainpage">
+
+<div id="homeicondest">
+    <img src="{{ url_for('static', filename='../static/images/error.svg')}}" alt="" id="ferorico">
+</div>
+
+
+<h1 id="headtitledst">
+    404
+</h1>
+
+
+
+<p id="about" style="text-align: center;">
+   page not foud
+   <br>
+   <br>
+   <br>
+   <a href="/"><button type="button" class="btn btn-primary btn-lg" style="text-transform: uppercase;">go to home</button></a>
+</p>
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div id="mainpage">
+
+<div id="homeicondest">
+    <img src="{{ url_for('static', filename='../static/images/warning.svg')}}" alt="" id="ferorico">
+</div>
+
+
+<h1 id="headtitledst">
+    error
+</h1>
+
+
+
+<p id="about" style="text-align: center;">
+   {{error}}
+   <br>
+   <br>
+   <br>
+   <a href="/converter"><button type="button" class="btn btn-primary btn-lg" style="text-transform: uppercase;">try again</button></a>
+</p>
+
+
+
+
+
+
+{% endblock %}
