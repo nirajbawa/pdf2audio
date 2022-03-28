@@ -1,37 +1,20 @@
 {% extends "layout.html" %}
 {% block body %}
 
-<style>
-.tmain{
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    background-color: whitesmoke;
-}
 
-
-@media only screen and (max-width: 1182px){
-    .tmain{
-        padding-top: 10%;
-        padding-bottom: 10%;
-    }
-}
-</style>
-
-<h1 class="tmain"> <i class="fa fa-file-pdf-o" aria-hidden="true"  class="tmain"></i>{{name}}</h1>
+<div class="tmain1"> <i class="fa fa-file-pdf-o" aria-hidden="true"  id="tmainicon"></i>{{name}}</div>
 <h1 class="tmain">{{main_name}}</h1>
-{% set audioname = '../static/audio/' + main_name %}
+{% set audioname = 'pdf/' + foldername + '/audio/' + main_name %}
 <div class="tmain">
 <audio controls>
     <source src="{{ url_for('static', filename=audioname)}}" type="audio/mpeg" >
 </audio>
+<p class="mia5l">make sure you download your file within 5 minutes after 5 minutes file is permanently deleted form server</p>
+<a href="/downloadFile/{{main_name}}" id="dbtn"><button type="button" class="btn btn-primary btn-lg"><i class="fa fa-file-audio-o" aria-hidden="true"></i> download</button></a>
+<a href="/" class="trybtn"><button type="button" class="btn btn-primary btn-lg"><i class="fa fa-rotate-right" aria-hidden="true"></i></button></a>
 </div>
 
-<a href="/downloadFile/{{main_name}}" class="tmain" id="dbtn"><button type="button" class="btn btn-primary btn-lg"><i class="fa fa-file-audio-o" aria-hidden="true"></i> download</button></a>
+
 
 
 {% endblock %}

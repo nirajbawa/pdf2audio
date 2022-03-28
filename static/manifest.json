@@ -1,0 +1,37 @@
+{
+    "name": "pdf to audio",
+    "short_name": "Flask pdf2audio",
+    "theme_color": "#ff0066",
+    "background_color": "#FFFFFF",
+    "description":"PAC (PDF TO AUDIO CONVERTER). OUR PDF TO AUDIO CONVERTER IS A FREE APPLICATION TO CONVERT YOUR ENGLISH LANGUAGE PDF BOOK TO AUDIO (MP3) CONVERTS TO FORMAT",
+    "start_url": "/",
+    "orientation": "portrait",
+    "display":"standalone",
+    "icons": [
+        {
+          "src": "/static/pwaimages/android-launchericon-48-48.png",
+          "type": "image/png",
+          "sizes": "48x48"
+        },
+        {
+          "src": "/static/pwaimages/android-launchericon-96-96.png",
+          "type": "image/png",
+          "sizes": "96x96"
+        },
+        {
+          "src": "/static/pwaimages/android-launchericon-144-144.png",
+          "type": "image/png",
+          "sizes": "144x144"
+        },
+        {
+          "src": "/static/pwaimages/android-launchericon-192-192.png",
+          "type": "image/png",
+          "sizes": "192x192"
+        },
+        {
+          "src": "/static/pwaimages/android-launchericon-512-512.png",
+          "type": "image/png",
+          "sizes": "512x512"
+        }
+    ]
+}

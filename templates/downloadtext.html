@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+<div class="tmain1"> <i class="fa fa-file-pdf-o" aria-hidden="true"  id="tmainicon"></i>{{name}}</div>
+<h1 class="tmain">{{main_name}}</h1>
+<div class="tmain">
+<p class="mia5l">make sure you download your file within 5 minutes after 5 minutes file is permanently deleted form server</p>
+<a href="/downloadtotext/{{main_name}}" id="dbtn"><button type="button" class="btn btn-primary btn-lg"><i class="fa fa-file-audio-o" aria-hidden="true"></i> download</button></a>
+<a href="/" class="trybtn"><button type="button" class="btn btn-primary btn-lg"><i class="fa fa-rotate-right" aria-hidden="true"></i></button></a>
+</div>
+
+
+
+{% endblock %}

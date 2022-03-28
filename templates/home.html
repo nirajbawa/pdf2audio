@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+<div id="homemain">
+
+
+  
+    <div class="alert alert-warning alert-dismissible fade show" role="alert" id="alert">
+        <strong> Hi! </strong>welcome to pdf to audio converter......
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
+
+
+    <div id="mainlist">
+    <a href="/converter/pdftoaudio"><button type="button" class="btn btn-primary btn-lg" id="getstartbtn"  class="ele1" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)), url({{ url_for('static', filename='../static/images/img2.jpg')}});   background-size: 500px 250px;">PDF TO AUDIO<br><p class="iconp"> <i class="fa fa-file-pdf-o" class="iconthis" aria-hidden="true"></i></p></button></a>
+  
+    <a href="/converter/pdftotext"><button type="button" class="btn btn-primary btn-lg" id="getstartbtn" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)), url({{ url_for('static', filename='../static/images/img3.jpg')}}); background-size: 500px 250px;">PDF TO AUDIO TEXT <br> <p class="iconp"> <i class="fa fa-file-image-o" class="iconthis" aria-hidden="true"></i></p></button></a>
+
+    <a href="/converter/pdftoimage"><button type="button" class="btn btn-primary btn-lg" id="getstartbtn" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)), url({{ url_for('static', filename='../static/images/myimg.jpg')}}); background-size: 500px 250px;">PDF TO AUDIO IMAGE <br> <p class="iconp"> <i class="fa fa-file-text-o" class="iconthis" aria-hidden="true"></i></p></button></a>
+    </div>
+
+      
+    
+    
+          
+     <div id="cohome">
+      Like any other website, audio2pdf uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. 
+      <button id="iconco" onclick="hiden()"><i class="fa fa-times" aria-hidden="true"></i></button>
+    </div>
+</div>
+
+
+
+    
+
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="tmain1"> <i class="fa fa-file-pdf-o" aria-hidden="true"  id="tmainicon"></i>{{name}}</div>
+
+<div class="tmain">
+<div class="listdiv">
+    <ul>
+        {% for main in main_name %}
+            <li>{{ main }}<a href="/downloadimageortext/{{main}}">download images</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+<p class="mia5l">make sure you download your file within 5 minutes after 5 minutes file is permanently deleted form server</p>
+<a href="/" class="trybtn"><button type="button" class="btn btn-primary btn-lg"><i class="fa fa-rotate-right" aria-hidden="true"></i></button></a>
+
+</div>
+
+{% endblock %}

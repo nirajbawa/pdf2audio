@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div id="mainpage">
+
+<div id="homeicondest">
+    <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+</div>
+
+
+<h1 id="headtitledst">
+    {{title}}
+</h1>
+
+<form action="/uploaderforimageandtext/{{urlcon}}" method="POST" id="upload" enctype="multipart/form-data"   accept=".pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+     <!-- <input type="file" name="file1" required> -->
+      <label for="formFile" class="form-label" ><p id="uplab">{{message}}</p></label>
+     <div class="mb-3">
+
+      <input class="form-control" type="file" name="file1" id="formFile" accept=".pdf">
+    </div>
+    <div id="laguagespann" style="display: none;">
+    <select class="form-select text-capitalize" aria-label="Default select example" name="lagpann" id="langpannel">
+      <option selected value="english">select your pdf language</option>
+      <option value="english">english</option>
+      <option value="hindi">hindi</option>
+      <option value="marathi">marathi</option>
+    </select>
+    </div>
+   
+
+     <br>
+     <br>
+     <input type="number" name="start" id="start" class="numinput" placeholder="Enter Page Number To play From ">
+     <input type="number" name="end" id="end" class="numinput"  placeholder="Enter page Number To End  ">
+    
+     <button type="button" id="submitbtn" onclick="inputtagvalidation()">upload file</button>
+</form>
+
+
+<div id="loarder">
+    <div class="spinner-grow text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-secondary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-success" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-warning" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-light" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <div class="spinner-grow text-dark" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+</div>
+
+</div>
+
+
+
+<script src="{{ url_for('static', filename='js/forvalid.js')}}"></script>
+
+
+{% endblock %}

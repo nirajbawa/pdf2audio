@@ -1,0 +1,9 @@
+{
+    "params":
+    {
+        "pdf_upload_folder_local" : "D:\\codefiles\\python project\\pdf-2-audio-in-flask\\static\\pdf\\",
+        "pdf_upload_prod" : " ",
+        "audio_upload_local" : "D:\\codefiles\\python project\\pdf-2-audio-in-flask\\static\\audio\\",
+        "audio_upload_prod" : " "
+    }
+}

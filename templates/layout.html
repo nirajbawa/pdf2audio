@@ -4,6 +4,15 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible"
+    content="ie=edge">
+
+    <!-- pwa files -->
+
+    <meta name="apple-mobile-web-app-status-bar" content="#aa7700">
+
+  
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}" />
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -23,14 +32,27 @@
 
 <link rel="shortcut icon" href="#" />
 
+<meta name="theme-color" content="#ff0066">
+
+
+
+
+
   </head>
   <body>
 
 
 <!-- computer menu -->
+<nav id="nav2">
+  <div>
+    <a href="" class="btntitile">pdf to audio</a>
+<button class="btnand" id="addbutton"><i class="fa fa-android" aria-hidden="true"></i></button>
+  </div>
+</nav>
     <nav id="nav">
       <button id="navbutton" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa fa-bars" aria-hidden="true"></i></button>
     </nav>
+    
 
 
     <!-- mobile menu -->
@@ -61,11 +83,13 @@
             </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="clsbtn">Close</button>
         </div>
       </div>
     </div>
   </div>
+
+
 
 {% block body %} {% endblock %}
 
@@ -82,10 +106,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
     -->
-
-
-
-    <script src="{{ url_for('static', filename='../static/js/layout.js')}}"></script>
-
+    <script src="{{ url_for('static', filename='js/layout.js')}}"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
   </body>
 </html>
